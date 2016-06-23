@@ -1,0 +1,5 @@
+---
+applications:
+- name: default-app-python
+  memory: 128M
+  buildpack: python_buildpack

@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class='row' style='margin-top:2em;margin-bottom:1em'>
+  <div class='col-xs-12'>
+    <img alt='Python' src='{{ url_for('static', filename='images/python.svg') }}' style='height:3em'>
+  </div>
+</div>
+
+<div class='row' style='margin-top:1em;margin-bottom:1em'>
+  <div class='col-xs-12'>
+    <h1>This is Python in the Cloud!</h1>
+    <p class='lead'>Congratulations! You successfully pushed a Python App into the Cloud.</p>
+  </div>
+</div>
+
+<div class='row' style='margin-top:1em;margin-bottom:1em'>
+  <div class='col-xs-12'>
+    <div class='alert alert-info'>
+      <p>
+        <strong>Getting Started</strong>
+      </p>
+      <br>
+      <ul>
+        <li>
+          To push your own source code, either upload it as a ZIP file to the portal or use the <a href='https://github.com/cloudfoundry/cli#downloads'>cf CLI</a> instead.
+        </li>
+        <li>
+          <a href='https://docs.developer.swisscom.com/tutorial-python/'>This tutorial</a> will get you started on the whole process.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% if env_vars %}
+<div class='row' style='margin-top:1em;margin-bottom:1em'>
+  <div class='col-xs-12'>
+    <h3>Environment Variables</h3>
+    <pre>{% for key, val in env_vars.iteritems() %}<p style="margin-bottom:0.1em"><strong>{{ key }}:</strong> <span class="text-danger">{{ val.decode('utf-8') }}</span></p>{% endfor %}</pre>
+  </div>
+</div>
+{% endif %}
+
+{% if req_headers %}
+<div class='row' style='margin-top:1em;margin-bottom:1em'>
+  <div class='col-xs-12'>
+    <h3>Request Headers</h3>
+    <pre>{% for key, val in req_headers.iteritems() %}<p style="margin-bottom:0.1em"><strong>{{ key }}:</strong> <span class="text-danger">{{ val.decode('utf-8') }}</span></p>{% endfor %}</pre>
+  </div>
+</div>
+{% endif %}
+
+{% if req_params %}
+<div class='row' style='margin-top:1em;margin-bottom:1em'>
+  <div class='col-xs-12'>
+    <h3>Request Params</h3>
+    <pre>{% for key, val in req_params.iteritems() %}<p style="margin-bottom:0.1em"><strong>{{ key }}:</strong> <span class="text-danger">{{ val.decode('utf-8') }}</span></p>{% endfor %}</pre>
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}

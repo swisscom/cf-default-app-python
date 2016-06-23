@@ -1,6 +1,8 @@
-# CF Sample App Python
+# CF Default App Python
 
-A sample [Flask](http://flask.pocoo.org/) application to deploy to Cloud Foundry which works out of the box.
+The default Python app that will be pushed in the Swisscom Application Cloud if no source code is provided.
+
+Based on [Flask](http://flask.pocoo.org/)
 
 ## Run locally
 

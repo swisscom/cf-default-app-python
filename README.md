@@ -20,3 +20,7 @@ Based on [Flask](http://flask.pocoo.org/)
 1. Install the [cf CLI](https://github.com/cloudfoundry/cli#downloads)
 1. Run `cf push --random-route`
 1. Visit the given URL
+
+## Create ZIP
+
+1. Run `zip -r python_app.zip static templates app.py Procfile requirements.txt`

@@ -1,2 +1,7 @@
-venv
-README.md
+*
+
+!static/
+!templates/
+!app.py
+!Procfile
+!requirements.txt

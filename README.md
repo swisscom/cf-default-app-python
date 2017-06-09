@@ -7,13 +7,9 @@ Based on [Flask](http://flask.pocoo.org/)
 ## Run locally
 
 1. Install [Python](http://docs.python-guide.org/en/latest/starting/installation/)
-1. Install `virtualenv` with `pip install virtualenv`
-1. Run `virtualenv venv` to create your virtual environment
-1. Run `source venv/bin/activate` on Mac OS X/Linux or`venv\Scripts\activate.bat` on windows to activate your virtual environment
 1. Run `pip install -r requirements.txt`
 1. Run `python app.py`
 1. Visit [http://localhost:3000](http://localhost:3000)
-1. Run `deactivate` when you're done
 
 ## Run in the cloud
 
